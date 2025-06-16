@@ -1,23 +1,43 @@
 <!DOCTYPE html>
+
+
 <html lang="en">
   <head>
     <title>Home</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
+    
     <link rel="stylesheet" href="styles.css" />
     <script type="module" src="script.js"></script>
   </head>
+
   <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
+    <div class="bg_container">
+      <video autoplay muted loop class="bg">
+        <source src="dt_resources/video/trailer.mp4" type="video/mp4" />
+      </video>
+      <div class="bg_overlay"></div>
+    </div>
+
+    <div class="navbar">
+      <nav>
+        <a href="index.html">
+          <img src="dt_resources/other/logo.png" id="nav_logo">
+        </a>
+        <ul>
+          <li class="jupiter"><a href="updates.html">UPDATES</a></li>
+          <li class="jupiter"><a href="tutorial.html">TUTORIAL</a></li>
+          <li class="jupiter"><a href="download.html">DOWNLOAD</a></li>
+        </ul>
+      </nav>
+    </div>
+
     <main>
-      <h1>Home page</h1>
+      <div class="content_1">
+        <img id="logo" class="center" src="" alt="logo">
+      </div>
+      
+      <h1 class="jupiter"></h1>
     </main>
   </body>
 </html>
