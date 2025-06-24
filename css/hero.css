@@ -43,7 +43,7 @@
     width: 700px;
     z-index: 2;
     pointer-events: none;
-    filter: drop-shadow(1px 1px 20px var(--black))
+    filter: drop-shadow(0 0 20px var(--black))
 }
 
 #title_upt {
@@ -57,12 +57,5 @@
     /* tutorial page title */
     top: 38vh;
     font-size: 28px;
-    z-index: 15;
-}
-
-#title_down {
-    /* download page title */
-    top: 64vh;
-    font-size: 18px;
     z-index: 15;
 }

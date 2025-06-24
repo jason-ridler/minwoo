@@ -47,22 +47,53 @@ section h1 {
     letter-spacing: 0.5px;
 }
 
-.divide_line {
+#teaser_trailer {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 0 20px var(--black);
+    margin-top: 50px;
     margin-bottom: 50px;
+}
+
+.divide_line {
     margin: 0 800px;
 }
 
-#download_button {
+#steam_button {
     position: fixed;
     top: 60%;
     left: 50%;
     transform: translateX(-50%);
-    width: 230px;
-    z-index: 9999;
-    pointer-events: fill;
-    filter: drop-shadow(1px 1px 20px var(--black))
+    width: 25vh;
+    height: 8vh;
+    filter: drop-shadow(1px 1px 20px var(--black));
+    border: none;
+    cursor: pointer;
+    pointer-events: auto;
+    z-index: 1000;
+    filter: drop-shadow(0 0 20px var(--black))
 }
 
-#download_button:hover {
-    fill:red; 
+button {
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    width: 25vh;
+    height: 8vh;
+    transform: translateX(-50%);
+    width: 230px;
+    z-index: 1000;
+    cursor: pointer;
+    pointer-events: auto;
+    border-radius: 8px;
+    opacity: 0;
+}
+
+#title_down {
+    /* download page title */
+    top: 64vh;
+    font-size: 18px;
+    z-index: 15;
 }

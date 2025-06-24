@@ -94,3 +94,10 @@ p {
     font-weight: bold;
     font-size: 20px;
 }
+
+#title_upt {
+    /* update page title */
+    top: 62vh;
+    font-size: 25px;
+    z-index: 15;
+}

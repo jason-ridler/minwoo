@@ -7,6 +7,7 @@
     box-sizing: border-box;
     text-shadow: 0 0 10px var(--black);
     cursor: url('../assets/icon/cursor.png') 1 1, auto;
+    /* border: 1px solid red; */ /* border for composition */
 }
 
 :root {
@@ -21,7 +22,7 @@
     --bg-mid: #07040c;
     --bg-gray: #131317;
     --button: #434343;
-    --line: #555
+    --line: #555;
 
     --twitter: #08a0e9;
     --twitch: #9146ff;
