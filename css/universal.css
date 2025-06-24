@@ -21,6 +21,7 @@
     --bg-mid: #07040c;
     --bg-gray: #131317;
     --button: #434343;
+    --line: #555
 
     --twitter: #08a0e9;
     --twitch: #9146ff;
@@ -82,4 +83,11 @@ p {
             rgba(0, 0, 0, 0.6) 90%,
             rgba(0, 0, 0, 0.8) 100%);
     pointer-events: none;
+}
+
+.divide_line {
+    height: 1px;
+    background-color: var(--line);
+    margin-top: 5px;
+    margin-bottom: 20px;
 }

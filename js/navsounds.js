@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     audioHover.volume = 0.3;
     audioHover.load();
 
-    const pageElements = document.querySelectorAll('nav ul li a:not(.active), #nav_logo, button, .head_icon');
+    const pageElements = document.querySelectorAll('nav ul li a:not(.active), #nav_logo, button');
 
     pageElements.forEach(link => {
         link.addEventListener('mouseenter', () => {
