@@ -20,23 +20,23 @@
 
 <body>
     <div class="hero_container">
-        <img src="../assets/img/download.jpg" class="hero"> <!-- hero image -->
+        <img src="../assets/img/download.jpg" class="hero" alt="download page hero"> <!-- hero image -->
         <div class="hero_overlay"></div> <!-- black overlay -->
 
-        <img src="../assets/logo/logo.png" id="main_logo"> <!-- main logo -->
-        <img src="../assets/logo/steam_download.svg" id="steam_button">
+        <img src="../assets/logo/logo.png" id="main_logo" alt="main logo"> <!-- main logo -->
+        <img src="../assets/logo/steam_download.svg" id="steam_button" alt="buy on steam button">
     </div>
 
     <div class="content_shadow"></div>
 
-    <a href="https://store.steampowered.com/app/3241660/REPO/" target="_blank">
+    <a href="https://store.steampowered.com/app/3241660/REPO/" target="_blank" alt="redirect to steam page">
         <button id="download_button">TEST</button>
     </a>
 
     <div class="navbar">
         <nav>
             <a href="../index.html">
-                <img src="../assets/logo/logo.png" id="nav_logo">
+                <img src="../assets/logo/logo.png" id="nav_logo" alt="navigation logo">
             </a>
             <ul>
                 <li class="recept"><a href="../pages/updates.html">UPDATES</a></li>
@@ -52,15 +52,18 @@
                 <h1 class="recept center orange">TEASER TRAILER</h1>
                 <div class="divide_line"></div>
                 <div class="center">
-                    <video id="teaser_trailer" controls poster="../assets/video/thumbnail.jpg">
-                        <source src="../assets/video/teaser.mp4" type="video/mp4" />
-                    </video>
+                    <iframe id="teaser_trailer" src="https://www.youtube.com/embed/C3IVB0Wnk1s" frameborder="0" alt="teaser trailer"
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+                        allowfullscreen>
+                    </iframe>
                 </div>
 
                 <h1 class="recept center orange">REQUIREMENTS</h1>
                 <div class="divide_line"></div>
-
-                <div class="gap_container">
+            </section>
+            
+            <section
+                <article class="gap_container">
                     <div class="gap_box">
                         <h2 class="recept">MINIMUM:</h2>
                         <ul class="tecnica">
@@ -85,7 +88,7 @@
                             <li><span class="orange">Storage:</span> 1 GB available space</li>
                         </ul>
                     </div>
-                </div>
+                </article>
             </section>
         </div>
     </main>
@@ -93,8 +96,8 @@
     <footer>
         <div class="navy_bg"> <!-- foooter -->
 
-            <img src="../assets/logo/steam.png" id="steam_logo">
-            <img src="../assets/logo/semiworks.png" id="semi_logo">
+            <img src="../assets/logo/steam.png" id="steam_logo" alt="steam logo">
+            <img src="../assets/logo/semiworks.png" id="semi_logo" alt="semiworks logo">
 
             <div class="social_icons"> <!-- social media icons -->
                 <a href="https://x.com/semiworkstudios" target="_blank">

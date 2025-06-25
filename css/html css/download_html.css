@@ -47,11 +47,11 @@ section h1 {
     letter-spacing: 0.5px;
 }
 
-#teaser_trailer {
+section #teaser_trailer {
     display: flex;
     position: relative;
     width: 100%;
-    height: auto;
+    height: 500px;
     box-shadow: 0 0 20px var(--black);
     margin-top: 50px;
     margin-bottom: 50px;
