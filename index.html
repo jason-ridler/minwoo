@@ -5,8 +5,11 @@
     <title>R.E.P.O. | Home</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="description" content="An online co-op horror game with up to 6 players. Locate valuable, fully physics-based objects and handle them with care as you retrieve and extract to satisfy your creator's desires." />
+    <meta name="description"
+        content="An online co-op horror game with up to 6 players. Locate valuable, fully physics-based objects and handle them with care as you retrieve and extract to satisfy your creator's desires." />
 
+    <link rel="icon" href="assets/icon/favicon.png" type="image/png">
+    <link rel="stylesheet" href="css/banner.css" />
     <link rel="stylesheet" href="css/popup.css" />
     <link rel="stylesheet" href="css/icon.css" />
     <link rel="stylesheet" href="css/slider.css" />
@@ -21,40 +24,41 @@
 </head>
 
 <body>
+    <header>
+        <div class="head_icon">
+            <img src="assets/icon/icon_closed.png" class="closed_img" alt="head closed">
+            <img src="assets/icon/icon_open.png" class="open_img" alt="head opened">
+        </div>
 
-    <div class="head_icon">
-        <img src="assets/icon/icon_closed.png" class="closed_img" alt="head closed">
-        <img src="assets/icon/icon_open.png" class="open_img" alt="head opened">
-    </div>
+        <div class="hero_container"> <!-- hero video -->
+            <video autoplay muted loop class="hero" alt="trailer video hero">
+                <source src="assets/video/trailer.mp4" type="video/mp4" />
+            </video>
 
-    <div class="hero_container"> <!-- hero video -->
-        <video autoplay muted loop class="hero" alt="trailer video hero">
-            <source src="assets/video/trailer.mp4" type="video/mp4" />
-        </video>
+            <div class="hero_overlay"></div> <!-- black overlay -->
 
-        <div class="hero_overlay"></div> <!-- black overlay -->
+            <img src="assets/logo/logo.png" id="main_logo" alt="main logo"> <!-- main logo -->
+        </div>
 
-        <img src="assets/logo/logo.png" id="main_logo" alt="main logo"> <!-- main logo -->
-    </div>
+        <div class="content_shadow"></div>
 
-    <div class="content_shadow"></div>
-
-    <div class="navbar">
-        <nav>
-            <a href="index.html">
-                <img src="assets/logo/logo.png" id="nav_logo" alt="navigation logo">
-            </a>
-            <ul>
-                <li class="recept"><a href="pages/updates.html">UPDATES</a></li>
-                <li class="recept"><a href="pages/tutorial.html">TUTORIAL</a></li>
-                <li class="recept"><a href="pages/download.html">DOWNLOAD</a></li>
-            </ul>
-        </nav>
-    </div>
+        <div class="navbar">
+            <nav>
+                <a href="index.html">
+                    <img src="assets/logo/logo.png" id="nav_logo" alt="navigation logo">
+                </a>
+                <ul>
+                    <li class="recept"><a href="pages/updates.html">UPDATES</a></li>
+                    <li class="recept"><a href="pages/tutorial.html">TUTORIAL</a></li>
+                    <li class="recept"><a href="pages/download.html">DOWNLOAD</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <main>
-        <section> <!-- game explanation (content[1]) -->
-            <div class="navy_bg">
+        <div class="navy_bg">
+            <section> <!-- game explanation (content[1]) -->
                 <article class="left_layout" style="padding-top: 200px;"> <!-- game explanation (content[1]) -->
                     <img src="assets/gif/retrieve.gif" class="content_img" alt="retrieve gif">
                     <div>
@@ -107,38 +111,38 @@
                         </p>
                     </div>
                 </article>
-            </div>
-        </section>
-        <section> <!-- gallery (content[2]) -->
-            <div class="navy_bg">
+            </section>
+            <section> <!-- gallery (content[2]) -->
                 <h1 class="recept center orange">GALLERY</h1>
                 <div class="slider_container" style="padding-bottom: 100px;">
                     <button id="prevBtn">‹</button>
 
-                        <div class="slider">
-                            <div class="slides" id="slides">
-                                <img src="assets/sc/1.jpg" alt="Slide 1" />
-                                <img src="assets/sc/2.jpg" alt="Slide 2" />
-                                <img src="assets/sc/3.jpg" alt="Slide 3" />
-                                <img src="assets/sc/4.jpg" alt="Slide 4" />
-                                <img src="assets/sc/5.jpg" alt="Slide 5" />
-                                <img src="assets/sc/6.jpg" alt="Slide 6" />
-                                <img src="assets/sc/7.jpg" alt="Slide 7" />
-                                <img src="assets/sc/8.jpg" alt="Slide 8" />
-                                <img src="assets/sc/9.jpg" alt="Slide 9" />
-                                <img src="assets/sc/10.jpg" alt="Slide 10" />
-                                <img src="assets/sc/11.jpg" alt="Slide 11" />
-                                <img src="assets/sc/12.jpg" alt="Slide 12" />
-                            </div>
+                    <div class="slider">
+                        <div class="slides" id="slides">
+                            <img src="assets/sc/1.jpg" alt="Slide 1" />
+                            <img src="assets/sc/2.jpg" alt="Slide 2" />
+                            <img src="assets/sc/3.jpg" alt="Slide 3" />
+                            <img src="assets/sc/4.jpg" alt="Slide 4" />
+                            <img src="assets/sc/5.jpg" alt="Slide 5" />
+                            <img src="assets/sc/6.jpg" alt="Slide 6" />
+                            <img src="assets/sc/7.jpg" alt="Slide 7" />
+                            <img src="assets/sc/8.jpg" alt="Slide 8" />
+                            <img src="assets/sc/9.jpg" alt="Slide 9" />
+                            <img src="assets/sc/10.jpg" alt="Slide 10" />
+                            <img src="assets/sc/11.jpg" alt="Slide 11" />
+                            <img src="assets/sc/12.jpg" alt="Slide 12" />
                         </div>
+                    </div>
 
                     <button id="nextBtn">›</button>
                 </div> <!-- end of slider_container -->
-
-                <div class="img_background" style="background-image: url('assets/img/homepage.png'); height: 400px;"></div>
-            </div> <!-- end of navy_bg -->
-        </section>
+            </section>
+            <section> <!-- image banner -->
+                <div class="banner" style="background-image: url('assets/banners/b3.png'); height: 400px;"></div>
+            </section>
+        </div>
     </main>
+    
     <footer>
         <div class="gray_bg"> <!-- foooter -->
 

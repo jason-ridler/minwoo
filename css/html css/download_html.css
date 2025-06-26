@@ -1,3 +1,4 @@
+/* === download page css ===*/
 
 section h1 {
     padding-top: 100px;
@@ -55,6 +56,11 @@ section #teaser_trailer {
     box-shadow: 0 0 20px var(--black);
     margin-top: 50px;
     margin-bottom: 50px;
+}
+
+.banner {
+    clip-path: inset(300px 0 0 0);
+    overflow: hidden;
 }
 
 .divide_line {

@@ -34,7 +34,7 @@ button {
     /* button for slider */
     background: none;
     border: none;
-    font-size: 48px;
+    font-size: 80px;
     cursor: pointer;
     color: var(--button);
     user-select: none;

@@ -6,6 +6,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
 
+    <link rel="icon" href="assets/icon/favicon.png" type="image/png">
+    <link rel="stylesheet" href="../css/banner.css" />
     <link rel="stylesheet" href="../css/html css/download_html.css" />
     <link rel="stylesheet" href="../css/icon.css" />
     <link rel="stylesheet" href="../css/slider.css" />
@@ -19,32 +21,34 @@
 </head>
 
 <body>
-    <div class="hero_container">
-        <img src="../assets/img/download.jpg" class="hero" alt="download page hero"> <!-- hero image -->
-        <div class="hero_overlay"></div> <!-- black overlay -->
+    <header>
+        <div class="hero_container">
+            <img src="../assets/img/download.jpg" class="hero" alt="download page hero"> <!-- hero image -->
+            <div class="hero_overlay"></div> <!-- black overlay -->
 
-        <img src="../assets/logo/logo.png" id="main_logo" alt="main logo"> <!-- main logo -->
-        <img src="../assets/logo/steam_download.svg" id="steam_button" alt="buy on steam button">
-    </div>
+            <img src="../assets/logo/logo.png" id="main_logo" alt="main logo"> <!-- main logo -->
+            <img src="../assets/logo/steam_download.svg" id="steam_button" alt="buy on steam button">
+        </div>
 
-    <div class="content_shadow"></div>
+        <div class="content_shadow"></div>
 
-    <a href="https://store.steampowered.com/app/3241660/REPO/" target="_blank" alt="redirect to steam page">
-        <button id="download_button">TEST</button>
-    </a>
+        <a href="https://store.steampowered.com/app/3241660/REPO/" target="_blank" alt="redirect to steam page">
+            <button id="download_button">TEST</button>
+        </a>
 
-    <div class="navbar">
-        <nav>
-            <a href="../index.html">
-                <img src="../assets/logo/logo.png" id="nav_logo" alt="navigation logo">
-            </a>
-            <ul>
-                <li class="recept"><a href="../pages/updates.html">UPDATES</a></li>
-                <li class="recept"><a href="../pages/tutorial.html">TUTORIAL</a></li>
-                <li class="recept"><a href="../pages/download.html" class="active">DOWNLOAD</a></li>
-            </ul>
-        </nav>
-    </div>
+        <div class="navbar">
+            <nav>
+                <a href="../index.html">
+                    <img src="../assets/logo/logo.png" id="nav_logo" alt="navigation logo">
+                </a>
+                <ul>
+                    <li class="recept"><a href="../pages/updates.html">UPDATES</a></li>
+                    <li class="recept"><a href="../pages/tutorial.html">TUTORIAL</a></li>
+                    <li class="recept"><a href="../pages/download.html" class="active">DOWNLOAD</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <main>
         <div class="gray_bg"> <!-- section 1 -->
@@ -52,17 +56,17 @@
                 <h1 class="recept center orange">TEASER TRAILER</h1>
                 <div class="divide_line"></div>
                 <div class="center">
-                    <iframe id="teaser_trailer" src="https://www.youtube.com/embed/C3IVB0Wnk1s" frameborder="0" alt="teaser trailer"
+                    <iframe id="teaser_trailer" src="https://www.youtube.com/embed/C3IVB0Wnk1s" frameborder="0"
+                        alt="teaser trailer"
                         allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
                         allowfullscreen>
                     </iframe>
                 </div>
-
-                <h1 class="recept center orange">REQUIREMENTS</h1>
-                <div class="divide_line"></div>
             </section>
 
-            <section
+            <section>
+                <h1 class="recept center orange">REQUIREMENTS</h1>
+                <div class="divide_line"></div>
                 <article class="gap_container">
                     <div class="gap_box">
                         <h2 class="recept">MINIMUM:</h2>
@@ -89,6 +93,10 @@
                         </ul>
                     </div>
                 </article>
+            </section>
+
+            <section> <!-- image banner -->
+                <div class="banner" style="background-image: url('../assets/banners/b7.png'); height: 620px;"></div>
             </section>
         </div>
     </main>
@@ -138,6 +146,7 @@
             </div>
         </div>
     </footer>
+
     <script src="../js/navsounds_other.js"></script>
 </body>
 
