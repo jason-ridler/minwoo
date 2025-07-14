@@ -3,8 +3,8 @@
 .head_icon {
     /* head icon in bottom left */
     position: fixed;
-    bottom: 35px;
-    left: 35px;
+    bottom: 3.5vh;
+    left: 2.5vw;
     width: 100px;
     height: 100px;
     z-index: 9999;

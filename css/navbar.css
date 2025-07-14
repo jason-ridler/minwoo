@@ -54,7 +54,7 @@ nav ul li a {
     /* nav text css */
     text-decoration: none;
     color: var(--white);
-    font-size: 16px;
+    font-size: clamp(0.1rem, 2vw, 1.1rem);
     list-style: none;
     display: inline-block;
 }
@@ -63,10 +63,10 @@ nav ul li a:not(.active):hover {
     text-shadow: 0 0 20px var(--white);
 }
 
-nav ul li a.active {
+nav ul li a.active {        
     /* nav active text css */
     color: var(--orange);
-    font-size: 17px;
+    font-size: clamp(0.1rem, 2vw, 1.2rem);
     font-weight: bold;
 }
 
@@ -77,4 +77,73 @@ nav ul li a.active {
 
 #nav_logo:hover {
     filter: drop-shadow(1px 1px 10px var(--w-glow))
+}
+
+@media (min-width: 1200px) {
+
+    nav ul li a {
+        /* nav text css */
+        text-decoration: none;
+        color: var(--white);
+        list-style: none;
+        display: inline-block;
+    }
+
+    nav ul li a.active {
+        /* nav active text css */
+        color: var(--orange);
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    #nav_logo {
+        /* navbar page logo */
+        width: 200px;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    /* style for laptops */
+    nav ul li a.active {
+        font-size: 1.1rem;
+    }
+
+    #nav_logo {
+        width: 180px;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    /* style for laptops */
+    nav ul li a.active {
+        font-size: 1rem;
+    }
+
+    #nav_logo {
+        width: 200px;
+    }
+}
+
+@media (max-width: 768px) { /* convert to hamburger? */
+
+    /* style for laptops */
+
+    #nav_logo {
+        width: 170px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* style for laptops */
+
+    nav ul li a.active {
+        font-size: 0.6rem;
+    }
+
+    #nav_logo {
+        width: 140px;
+    }
 }

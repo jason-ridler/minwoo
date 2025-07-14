@@ -21,7 +21,14 @@
     /* navy bg for content */
     position: relative;
     z-index: 2;
+    width: 100vw;
     background-color: var(--bg-navy);
+}
+
+.mid_bg {
+    /* middle colored bg for content */
+    position: relative;
+    background-color: var(--bg-mid);
 }
 
 .gray_bg {
@@ -34,5 +41,9 @@
 
 .content_img {
     /* shadow for content */
+    flex-shrink: 1;
+    width: 100%;
+    height: auto;
+    display: block;
     box-shadow: 0 0 2.6vw #000;
 }
