@@ -24,6 +24,11 @@
     background-color: var(--bg-navy);
 }
 
+.mid_bg {
+    position: relative;
+    background-color: var(--bg-mid);
+}
+
 .gray_bg {
     /* gray bg for content */
     position: relative;
