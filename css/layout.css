@@ -69,13 +69,14 @@
     margin-bottom: 2.5vh;
 }
 
-.left_layout > div,
-.right_layout > div {
+.left_layout>div,
+.right_layout>div {
     font-size: clamp(0.7rem, 2.2vw, 1.2rem);
 }
 
 
-@media (max-width: 1200px) {
+@media (max-width: 1439px) {
+
     .left_layout,
     .right_layout,
     .index h2,
@@ -98,8 +99,4 @@
     .right_layout {
         flex-direction: column-reverse;
     }
-}
-
-@media (max-width: 1024px) {
-    
 }
