@@ -25,6 +25,10 @@
 }
 
 .mid_bg {
+<<<<<<< Updated upstream
+=======
+    /* middle colored bg for content */
+>>>>>>> Stashed changes
     position: relative;
     background-color: var(--bg-mid);
 }
