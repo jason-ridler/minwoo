@@ -1,23 +1,29 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     const slides = document.getElementById('slides');
-    const slideWidth = 900;
-    let index = 1;
-    let isMoving = false;
-
+    const slider = document.querySelecter('.slider');
     const imgArray = Array.from(slides.children);
+
     const firstClone = imgArray[0].cloneNode(true);
     const lastClone = imgArray[imgArray.length - 1].cloneNode(true);
 
     slides.appendChild(firstClone);
     slides.insertBefore(lastClone, slides.firstChild);
-    slides.style.transform = `translateX(-${slideWidth * index}px)`;
+
+    let index = 1;
+    let isMoving = false;
+
+    function getSlideWidth() {
+        return slider.clientWidth;
+    }
+
+    slides.style.transform = `translateX(-${getSlideWidth() * index}px)`;
 
     function moveSlide(toIndex) {
         if (isMoving) return;
         isMoving = true;
         slides.style.transition = 'transform 0.5s ease';
-        slides.style.transform = `translateX(-${slideWidth * toIndex}px)`;
+        slides.style.transform = `translateX(-${getSlideWidth() * toIndex}px)`;
         index = toIndex;
     }
 
@@ -30,16 +36,21 @@ document.addEventListener("DOMContentLoaded", () => {
         if (index === 0) {
             slides.style.transition = 'none';
             index = total;
-            slides.style.transform = `translateX(-${slideWidth * index}px)`;
+            slides.style.transform = `translateX(-${getSlideWidth() * index}px)`;
         }
 
         if (index === total + 1) {
             slides.style.transition = 'none';
             index = 1;
-            slides.style.transform = `translateX(-${slideWidth * index}px)`;
+            slides.style.transform = `translateX(-${getSlideWidth() * index}px)`;
         }
 
         isMoving = false;
 
+    });
+
+    window.addEventListener('resize', () => {
+        slides.style.transition = 'none';
+        slides.style.transform = `translateX(-${getSlideWidth() * index}px)`;
     });
 });

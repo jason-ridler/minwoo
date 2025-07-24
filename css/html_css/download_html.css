@@ -48,22 +48,25 @@ section h1 {
     letter-spacing: 0.5px;
 }
 
-section #teaser_trailer {
+#teaser_trailer {
+    display: block;
     position: relative;
-    width: 100%;
-    height: 500px;
     box-shadow: 0 0 20px var(--black);
-    margin-top: 50px;
-    margin-bottom: 50px;
+    width: 100%;
+    max-width: 50vw;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border: 0;
 }
 
-.banner {
-    height: 25vh;
+#download_banner {
     background-position: center 80%;
+    aspect-ratio: 16 / 3;
 }
 
 .divide_line {
     margin: 0 800px;
+    margin-bottom: 50px;
 }
 
 #steam_button {

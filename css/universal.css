@@ -361,8 +361,10 @@ nav ul li a.active {
 /* #region ========================= layout css ========================= */
 .center {
     /* center text */
-    margin: auto;
-    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
     text-align: center;
 }
 
@@ -428,11 +430,10 @@ nav ul li a.active {
     margin-bottom: 2.5vh;
 }
 
-.left_layout>div,
-.right_layout>div {
+.left_layout > div,
+.right_layout > div {
     font-size: clamp(0.7rem, 2.2vw, 1.2rem);
 }
-
 
 @media (max-width: 1439px) {
 
@@ -535,7 +536,7 @@ nav ul li a.active {
 .banner {
     /* image content bg */
     position: relative;
-    width: auto;
+    width: 100%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -579,14 +580,13 @@ nav ul li a.active {
     align-items: center;
     justify-content: center;
     margin: 2vh auto;
-    width: max-content;
+    width: 100%;
 }
 
 .slider {
     /* slider css */
     max-width: 900px;
     width: 100%;
-    height: auto;
     overflow: hidden;
 }
 
@@ -598,8 +598,8 @@ nav ul li a.active {
 
 .slides img {
     /* actual image css */
-    width: 900px;
-    height: 600px;
+    width: 100%;
+    height: auto;
     object-fit: contain;
     flex-shrink: 0;
 }
@@ -608,7 +608,7 @@ button {
     /* button for slider */
     background: none;
     border: none;
-    font-size: 80px;
+    font-size: clamp(2.5rem, 3vw + 2rem, 5rem);
     cursor: pointer;
     color: var(--button);
     user-select: none;
@@ -638,10 +638,10 @@ button:hover {
     position: fixed;
     bottom: 3.5vh;
     left: 2.5vw;
-    width: 100px;
-    height: 100px;
     z-index: 9999;
     cursor: pointer;
+    width: clamp(50px, 8vw, 100px);
+    aspect-ratio: 1 / 1;
 }
 
 .head_icon img {
