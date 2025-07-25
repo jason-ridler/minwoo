@@ -1,5 +1,9 @@
 /* === index page css ===*/
 
+.center {
+    display: flex;
+}
+
 .left_layout:first-of-type {
     padding-top: 200px;
     padding-bottom: 150px;

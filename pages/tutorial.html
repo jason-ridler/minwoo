@@ -29,10 +29,27 @@
                 <a href="../index.html">
                     <img src="../assets/logo/logo.png" id="nav_logo" alt="navigation logo">
                 </a>
-                <ul>
+                <ul class="sidebar">
+                    <li class="showOnMobile" onclick=closeSidebar()>
+                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M697.4 759.2l61.8-61.8L573.8 512l185.4-185.4-61.8-61.8L512 450.2 326.6 264.8l-61.8 61.8L450.2 512 264.8 697.4l61.8 61.8L512 573.8z" />
+                        </svg>
+                    </li>
                     <li class="recept"><a href="../pages/updates.html">UPDATES</a></li>
                     <li class="recept"><a href="../pages/tutorial.html" class="active">TUTORIAL</a></li>
                     <li class="recept"><a href="../pages/download.html">DOWNLOAD</a></li>
+                </ul>
+                <ul>
+                    <li class="recept hideOnMobile"><a href="../pages/updates.html">UPDATES</a></li>
+                    <li class="recept hideOnMobile"><a href="../pages/tutorial.html" class="active">TUTORIAL</a></li>
+                    <li class="recept hideOnMobile"><a href="../pages/download.html">DOWNLOAD</a></li>
+                    <li class="showOnMobile" onclick=showSidebar()>
+                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M768 306.2V383H256v-76.8h512zM256 536.6h512v-76.8H256v76.8zm0 153.6h512v-76.8H256v76.8z" fill-rule="evenodd" />
+                        </svg>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -41,8 +58,9 @@
     <main>
         <div class="navy_bg" id="retrieve_tut"> <!-- how to retrieve -->
             <section>
-                <h1 class="recept center">How To<br><span class="recept center orange"
-                        style="font-size: 2.5rem; padding-top: 5px;">RETRIEVE</span></h1>
+                <h1 class="recept center">How To<br>
+                    <span class="recept center orange" style="font-size: 2.5rem; padding-top: 5px;">RETRIEVE</span>
+                </h1>
 
                 <article class="left_layout">
                     <img src="../assets/gif/tutorial_gif/cart1.gif" class="content_img" alt="cart gif 1">
@@ -77,7 +95,7 @@
 
                 <article class="center">
                     <img src="../assets/gif/tutorial_gif/extract1.gif" class="content_img" alt="extract gif 1">
-                    <p>
+                    <p class="center">
                         When you think you reached your goal, you can always find your way to the nearest extraction
                         point and extract your money.
                         When you finish, the money will be deposited to be used in the shop, the rest remaining as cash
@@ -87,7 +105,7 @@
 
                 <article class="center">
                     <img src="../assets/gif/tutorial_gif/extract2.gif" class="content_img" alt="extract gif 1">
-                    <p>
+                    <p class="center">
                         As you reach higher levels, you required extraction points will grow.
                         You would first start with only one required,
                         which will increase as you elevate into new heights.
@@ -96,7 +114,7 @@
 
                 <article class="center">
                     <img src="../assets/gif/tutorial_gif/extract3.gif" class="content_img" alt="extract gif 1">
-                    <p>
+                    <p class="center">
                         But be fast, as the sound of your last extraction point makes a loud noise towards you and your
                         ship...
                         causing nearby monsters to swarm towards you, it's numbers increasing over time.
@@ -111,7 +129,7 @@
                         style="font-size: 2.5rem; padding-top: 5px;">PROFIT</span></h1>
 
                 <article class="center">
-                    <p>
+                    <p class="center">
                         So you've passed the level; now what? Using the money that you earned, you can now heal,
                         upgrade,
                         and gear up to reorganize into new levels. Increased extraction points, more monsters, and
@@ -121,6 +139,7 @@
                     <img src="../assets/gif/tutorial_gif/shop.gif" class="content_img" alt="extract gif 1">
                 </article>
             </section>
+            <div style="height: 15vh;"></div>
         </div>
     </main>
 
@@ -171,6 +190,7 @@
     </footer>
 
     <script src="../js/navsounds_other.js"></script>
+    <script src="../js/sidebar.js"></script>
 </body>
 
 </html>

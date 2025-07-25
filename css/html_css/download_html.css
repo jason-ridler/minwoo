@@ -1,5 +1,9 @@
 /* === download page css ===*/
 
+.center {
+    display: flex;
+}
+
 section h1 {
     padding-top: 100px;
     font-size: 30px;
