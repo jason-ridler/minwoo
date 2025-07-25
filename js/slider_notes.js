@@ -1,57 +1,74 @@
-
 /*
-JS notes because im going to forget:
+JS notes for responsive slider:
 
 const = "constant variable", cannot be reassigned
 let = "let me change this," reassignable later
 
-append = add to the end
-appendChild = add child element to the end of another child element
+appendChild = add child element to the end of another element
+insertBefore = insert element before another specified child element
+
+querySelector = select first matching element by CSS selector
+clientWidth = current visible width of an element in pixels
+
+cloneNode(true) = deep clone of an element (clone itself and its children)
+
 */
 
-document.addEventListener("DOMContentLoaded", () => { // load script only when website loaded
-    const slides = document.getElementById('slides'); // variable "slides" will always refer to elements with the id "slides"
-    const slideWidth = 600; // variable for slide's width, to calculate the animation
-    let index = 1; // slide index counter
-    let isMoving = false; // prevent slide animation overlapping
+document.addEventListener("DOMContentLoaded", () => { // run code after HTML loads
+    const slides = document.getElementById('slides'); // get slides container
+    const slider = document.querySelector('.slider'); // get slider container to measure width
 
-    const imgArray = Array.from(slides.children); // converts everything from slides.children (everything inside "slides") into an array
-    const firstClone = imgArray[0].cloneNode(true); // creates deep clone of first image and stores it
-    const lastClone = imgArray[imgArray.length - 1].cloneNode(true); // creates deep clone of last image and stores it
+    let index = 1; // current slide index (starts at first real slide, because of clones)
+    let isMoving = false; // prevent overlapping animations
 
-    // .cloneNode(true) = makes a deep clone (completely independent clone) for loop
+    const imgArray = Array.from(slides.children); // get all slide images as an array
+    const firstClone = imgArray[0].cloneNode(true); // clone first slide
+    const lastClone = imgArray[imgArray.length - 1].cloneNode(true); // clone last slide
 
-    slides.appendChild(firstClone); // adds "firstClone" to the very end
-    slides.insertBefore(lastClone, slides.firstChild); // adds "last Clone" to the very front
-    slides.style.transform = `translateX(-${slideWidth * index}px)`; // set initial position
+    slides.appendChild(firstClone); // add clone of first slide at the end
+    slides.insertBefore(lastClone, slides.firstChild); // add clone of last slide at the beginning
 
-    function moveSlide(toIndex) { // function to move slide img to another
-        if (isMoving) return; // fix spamming click freezing slider
-        isMoving = true;
-        slides.style.transition = 'transform 0.5s ease'; // css transition animation
-        slides.style.transform = `translateX(-${slideWidth * toIndex}px)`; // move slider container horizontally
-        index = toIndex; // update slide index counter to new index
+    function getSlideWidth() {
+        return slider.clientWidth; // get current width of slider container dynamically (for responsiveness)
     }
 
-    document.getElementById('nextBtn').onclick = () => moveSlide(index + 1); // move to next slide
-    document.getElementById('prevBtn').onclick = () => moveSlide(index - 1); // move to previous slide
+    // Set initial position: move slides left by one slide width to show first real slide
+    slides.style.transform = `translateX(-${getSlideWidth() * index}px)`;
 
-    slides.addEventListener('transitionend', () => { // wait till css transition has finished
-        const total = slides.children.length - 2; // get actual number of real slides
+    function moveSlide(toIndex) { // move to slide with given index
+        if (isMoving) return; // ignore if animation is ongoing
+        isMoving = true; // mark animation as started
+        slides.style.transition = 'transform 0.5s ease'; // enable smooth sliding animation
+        slides.style.transform = `translateX(-${getSlideWidth() * toIndex}px)`; // move horizontally by slide width * index
+        index = toIndex; // update current slide index
+    }
 
-        if (index === 0) { // check if index moved left past last slide clone
-            slides.style.transition = 'none'; // temporarily turn off css transition
-            index = total; // update to last real slide
-            slides.style.transform = `translateX(-${slideWidth * index}px)`; // move slide container to last real slide
+    // Attach button click handlers to move slides
+    document.getElementById('nextBtn').onclick = () => moveSlide(index + 1); // next slide
+    document.getElementById('prevBtn').onclick = () => moveSlide(index - 1); // previous slide
+
+    // When CSS transition ends, check if we need to reset position for infinite loop effect
+    slides.addEventListener('transitionend', () => {
+        const total = slides.children.length - 2; // total real slides (excluding clones)
+
+        if (index === 0) { // if moved left beyond first real slide (showing clone of last slide)
+            slides.style.transition = 'none'; // disable animation
+            index = total; // jump instantly to last real slide
+            slides.style.transform = `translateX(-${getSlideWidth() * index}px)`; // update position
         }
 
-        if (index === total + 1) { // check if index moved right past last slide clone
+        if (index === total + 1) { // if moved right beyond last real slide (showing clone of first slide)
             slides.style.transition = 'none';
-            index = 1; // update to first real slide
-            slides.style.transform = `translateX(-${slideWidth * index}px)`;
+            index = 1; // jump instantly to first real slide
+            slides.style.transform = `translateX(-${getSlideWidth() * index}px)`; // update position
         }
 
-        isMoving = false; // slide animation has finished, allows new slides to move again
+        isMoving = false; // animation finished, allow new moves
+    });
 
+    // On window resize, update slide position immediately to keep it centered
+    window.addEventListener('resize', () => {
+        slides.style.transition = 'none'; // disable animation for immediate reposition
+        slides.style.transform = `translateX(-${getSlideWidth() * index}px)`; // reposition
     });
 });
